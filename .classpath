@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="gson/gson/src/main/java/|gson/metrics/src/main/java/|gson/gson/src/test/java/|gson/codegen/src/main/java/|gson/examples/android-proguard-example/src/|gson/codegen/src/test/java/|gson/proto/src/main/java/|gson/extras/src/main/java/|gson/proto/src/test/java/|gson/extras/src/test/java/|gson/gson/src/main/java-templates/" kind="src" path=""/>
+	<classpathentry kind="src" path="gson/codegen/src/main/java"/>
+	<classpathentry kind="src" path="gson/codegen/src/test/java"/>
+	<classpathentry kind="src" path="gson/examples/android-proguard-example/src"/>
+	<classpathentry kind="src" path="gson/extras/src/main/java"/>
+	<classpathentry kind="src" path="gson/extras/src/test/java"/>
+	<classpathentry kind="src" path="gson/gson/src/main/java"/>
+	<classpathentry kind="src" path="gson/gson/src/main/java-templates"/>
+	<classpathentry kind="src" path="gson/gson/src/test/java"/>
+	<classpathentry kind="src" path="gson/metrics/src/main/java"/>
+	<classpathentry kind="src" path="gson/proto/src/main/java"/>
+	<classpathentry kind="src" path="gson/proto/src/test/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFX"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
