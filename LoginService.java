@@ -57,7 +57,7 @@ public class LoginService extends Application{
 		root.addColumn(1,usernameInsert,passwordInsert,createAccount);
 		
 		root.getChildren();
-		primaryStage.setScene(new Scene(root, 800, 550));
+		primaryStage.setScene(new Scene(root, 500, 400));
 		primaryStage.show();
 	}
 	

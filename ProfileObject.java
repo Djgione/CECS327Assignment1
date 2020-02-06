@@ -5,10 +5,10 @@ public class ProfileObject {
 	private String lastName;
 	private String email;
 	private String gender;
-	private String age;
+	private int age;
 	
 
-	public ProfileObject(String firstName, String lastName, String email, String gender, String age) {
+	public ProfileObject(String firstName, String lastName, String email, String gender, int age) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
@@ -39,10 +39,10 @@ public class ProfileObject {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public String getAge() {
+	public int getAge() {
 		return age;
 	}
-	public void setAge(String age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 	
