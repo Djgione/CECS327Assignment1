@@ -26,10 +26,7 @@ public class AccountCreationManager {
 		else if(!service.checkPassword())
 			return "Password Invalid";
 		else
-		{
-			
 			return "";
-		}
 		
 	}
 }

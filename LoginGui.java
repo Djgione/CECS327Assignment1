@@ -31,6 +31,7 @@ public class LoginGui extends Application{
 	{
 		
 	}
+	
 	@Override
 	public void start(Stage primaryStage) 
 	{
@@ -78,7 +79,12 @@ public class LoginGui extends Application{
 				LoginObject credentials = new LoginObject(usernameInsert.getText(), passwordInsert.getText());
 				
 				
-				
+				DashboardGui obj = new DashboardGui();
+				obj.Start();
+				Node source = (Node) (event.getSource());
+				Stage sourceStage = (Stage)source.getScene().getWindow();
+				sourceStage.close();
+			
 			}
 		});
 
