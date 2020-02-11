@@ -1,0 +1,22 @@
+Daniel Gione
+	Dashboard Gui
+	Login Gui
+	Create Account Gui
+	Account Creatoin Manager
+	Account Creatoin Service
+	Login Manager
+	Login Service 
+	PlayList
+	Profile Object
+	Login Object
+	Main 
+Josiah Quan
+	Song
+	Login Service 
+	Account Creatoin Service
+	Cecs327 Input Stream
+	Account Database
+	Summary of Work Completed
+	User Guide
+	
+Peter Park
