@@ -26,6 +26,9 @@ public class AccountCreationManager {
 		else if(!service.checkPassword())
 			return "Password Invalid";
 		else
+			//successful
+			LoginGui.accounts.addAccount(service.getProfile());
+			System.out.println("account added");
 			return "";
 		
 	}

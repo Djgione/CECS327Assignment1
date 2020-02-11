@@ -76,9 +76,14 @@ public class AccountCreationService {
 	///TODO: finish check username
 	public boolean checkUsername()
 	{
-		
-		
-		
+		if(LoginGui.accounts.accountArray.length == 0){
+			return true;
+		}
+		for(ProfileObject prof : LoginGui.accounts.accountArray){
+			if(profile.getUsername().equals(prof.getUsername())){
+				return false;
+			}
+		}
 		return true;
 	}
 	
