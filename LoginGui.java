@@ -17,9 +17,9 @@ import javafx.stage.Stage;
 
 public class LoginGui extends Application{
 
-	public LoginGui()
+	public static void main(String [] args)
 	{
-		
+		launch(args);
 	}
 	
 
