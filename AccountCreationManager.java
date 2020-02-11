@@ -13,11 +13,21 @@ public class AccountCreationManager {
 	}
 	
 	///TODO: finish calling all methods
-	public boolean VerifyAccount()
+	public String VerifyAccount()
 	{
 		
+		if(!service.checkUsername())
+			return "Username Invalid";
+		else if(!service.checkAge())
+			return "Age Invalid";
+		else if(!service.checkGender())
+			return "Gender Invalid";
+		else if(!service.checkName())
+			return "Name Invalid";
+		else if(!service.checkPassword())
+			return "Password Invalid";
+		else
+			return "";
 		
-		
-		return true;
 	}
 }

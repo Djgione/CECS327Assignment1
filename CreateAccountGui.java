@@ -11,7 +11,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-public class CreateAccountService{
+public class CreateAccountGui{
 
 	private Stage primaryStage;
 	private Stage pastStage;
@@ -20,7 +20,7 @@ public class CreateAccountService{
 		return primaryStage;
 	}
 
-	public CreateAccountService(Stage pastStage)
+	public CreateAccountGui(Stage pastStage)
 	{
 		this.pastStage = pastStage; //old stage (login)
 		Stage primary = new Stage(); //new stage
