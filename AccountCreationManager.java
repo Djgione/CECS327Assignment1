@@ -1,14 +1,13 @@
-
 public class AccountCreationManager {
 
-	private AccountCreationValidationService service;
+	private AccountCreationService service;
 	
-	AccountCreationManager(AccountCreationValidationService service)
+	AccountCreationManager(AccountCreationService service)
 	{
 		this.service = service;
 	}
 
-	public AccountCreationValidationService getService() {
+	public AccountCreationService getService() {
 		return service;
 	}
 	

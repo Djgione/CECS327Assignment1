@@ -64,5 +64,22 @@ public class ProfileObject {
 		this.age = age;
 	}
 	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("firstName: ");
+		builder.append(firstName);
+		builder.append(", lastName: ");
+		builder.append(lastName);
+		builder.append(", email: ");
+		builder.append(email);
+		builder.append(", gender: ");
+		builder.append(gender);
+		builder.append(", age: ");
+		builder.append(age);
+		builder.append(", playlists: ");
+		builder.append(playlists);
+		return builder.toString();
+	}
 	
 }
