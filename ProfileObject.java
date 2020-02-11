@@ -3,15 +3,19 @@ import java.util.List;
 ///class to store other info on an account, used to pull profile from json and to create accounts
 public class ProfileObject {
 
+	private String username;
+	private String password;
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String gender;
 	private int age;
-	private List<PlayList> playlists; 
+	private List<PlayList> playlists;
 	
 
-	public ProfileObject(String firstName, String lastName, String email, String gender, int age) {
+	public ProfileObject(String username, String password, String firstName, String lastName, String email, String gender, int age) {
+		this.username = username;
+		this.password = password;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
@@ -25,6 +29,9 @@ public class ProfileObject {
 	public List<PlayList> getPlaylists()
 	{
 		return playlists;
+	}
+	public String getUsername() {
+		return username;
 	}
 	public String getFirstName() {
 		return firstName;
