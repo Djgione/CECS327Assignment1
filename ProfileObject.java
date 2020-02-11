@@ -3,6 +3,7 @@ import java.util.List;
 ///class to store other info on an account, used to pull profile from json and to create accounts
 public class ProfileObject {
 
+	
 	private String firstName;
 	private String lastName;
 	private String email;
@@ -56,6 +57,25 @@ public class ProfileObject {
 	public void setAge(int age) {
 		this.age = age;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("firstName: ");
+		builder.append(firstName);
+		builder.append(", lastName: ");
+		builder.append(lastName);
+		builder.append(", email: ");
+		builder.append(email);
+		builder.append(", gender: ");
+		builder.append(gender);
+		builder.append(", age: ");
+		builder.append(age);
+		builder.append(", playlists: ");
+		builder.append(playlists);
+		return builder.toString();
+	}
 	
+
 	
 }

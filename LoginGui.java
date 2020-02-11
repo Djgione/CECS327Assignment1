@@ -17,11 +17,11 @@ import javafx.stage.Stage;
 
 public class LoginGui extends Application{
 
-	
-	
-	public static void main(String[] args) {
-		launch(args);
+	public LoginGui()
+	{
+		
 	}
+	
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -43,7 +43,11 @@ public class LoginGui extends Application{
 
 			@Override
 			public void handle(ActionEvent event) {
-				System.out.println("Hello World!");
+
+				LoginObject credentials = new LoginObject(usernameInsert.getText(), passwordInsert.getText());
+				
+				
+				
 			}
 		});
 

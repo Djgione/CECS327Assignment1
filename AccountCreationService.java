@@ -1,5 +1,5 @@
 
-public class AccountCreationValidationService {
+public class AccountCreationService {
 	
 	private String nameChecker = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ, .-'";
 	private LoginObject credentials;
@@ -16,7 +16,7 @@ public class AccountCreationValidationService {
 
 
 	
-	AccountCreationValidationService(LoginObject credentials, ProfileObject profile)
+	AccountCreationService(LoginObject credentials, ProfileObject profile)
 	{	
 		this.credentials = credentials;
 		this.profile = profile;
@@ -97,6 +97,13 @@ public class AccountCreationValidationService {
 		return true;
 	}
 	
+	//check for valid email
+	///TODO emailcheck
+	public boolean checkEmail()
+	{
+		
+		return true;
+	}
 
 	
 	

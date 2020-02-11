@@ -27,8 +27,9 @@ public class CreateAccountGui{
 		
 		GridPane pane = new GridPane(); //new pane for new stage
 		pane.setAlignment(Pos.CENTER);
-		Button create = new Button("Create");
-		create.setOnMouseClicked(event-> createAccount());
+		
+		Label invis = new Label();
+		invis.setVisible(false);
 		
 		HBox genderCombo = new HBox(10); //hbox to contain gender label and dropbox
 		Label gen = new Label("Gender: "); //gender label
@@ -58,13 +59,42 @@ public class CreateAccountGui{
 		age.setPromptText("44");
 		Label ageLabel = new Label("Age: ");
 		HBox ageHolder = new HBox(10);
+		
+		//button creatoin and action
+		
+		
+		Button create = new Button("Create");
+		create.setOnMouseClicked(event-> {
+		String retString = createAccount(user, pass, fname, lname,email,gender, age);
+		if(!retString.equals(""))
+		{
+			invis.setText(retString);
+			invis.setVisible(true);
+		}
+		else
+		{
+			invis.setText("Account Created!");
+			try {
+			Thread.sleep(1000);
+			}
+			catch(InterruptedException e)
+			{
+				e.printStackTrace();
+			}
+			
+		}
+		
+		}	);
+		
+		
+		
 		ageHolder.getChildren().addAll(ageLabel, age);
 		
 		ageHolder.requestFocus();
 		
 		pane.setVgap(15);
 		pane.setHgap(10);
-		pane.addColumn(0, email,user,pass,fname,lname,ageHolder,genderCombo,create);
+		pane.addColumn(0, email,user,pass,fname,lname,ageHolder,genderCombo,create, invis);
 		pane.setPadding(new Insets(20,20,20,20));
 		
 		
@@ -76,11 +106,23 @@ public class CreateAccountGui{
 		this.primaryStage = primary;
 	}
 	
-	private void createAccount()
+	//attempts to create and validate for accurate account
+	private String createAccount(TextField user, TextField pass, TextField fname, TextField lname, TextField email, ComboBox<String> gender, TextField age)
 	{
+		int ageNum;
+		try {
+			ageNum = Integer.parseInt(age.getText());
+		}
+		catch(NumberFormatException e)
+		{
+			return "Age Invalid";
+		}
+		ProfileObject profile = new ProfileObject(fname.getText(), lname.getText(), email.getText(), gender.getValue(), ageNum);
 		
-		
-		
+		LoginObject credentials = new LoginObject(user.getText(), pass.getText());
+		AccountCreationManager accManager = new AccountCreationManager(new AccountCreationService(credentials, profile));
+		return accManager.VerifyAccount();
+	
 	}
 
 	
