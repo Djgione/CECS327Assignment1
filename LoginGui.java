@@ -23,16 +23,12 @@ import javafx.stage.Stage;
 
 
 public class LoginGui extends Application{
-<<<<<<< HEAD
+
+	private Song[] songArray;
 
 	public static void main(String [] args)
 	{
-=======
-	public Song[] songArray;
-	
-	
-	public static void main(String[] args) {
->>>>>>> JosiahQ
+		
 		launch(args);
 	}
 	

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/mp3player"/>
 	<classpathentry excluding="gson/gson/src/main/java/|gson/metrics/src/main/java/|gson/gson/src/test/java/|gson/codegen/src/main/java/|gson/examples/android-proguard-example/src/|gson/codegen/src/test/java/|gson/proto/src/main/java/|gson/extras/src/main/java/|gson/proto/src/test/java/|gson/extras/src/test/java/|gson/gson/src/main/java-templates/" kind="src" path=""/>
 	<classpathentry kind="src" path="gson/codegen/src/main/java"/>
 	<classpathentry kind="src" path="gson/codegen/src/test/java"/>

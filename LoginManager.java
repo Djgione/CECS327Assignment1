@@ -5,7 +5,6 @@ public class LoginManager {
 	public LoginManager(LoginService service) {
 		this.service = service;
 	}
-	
 
 	public LoginService getService() {
 		return service;
@@ -15,10 +14,4 @@ public class LoginManager {
 	{
 		return service.checkCredentials();
 	}
-	
-	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> JosiahQ
