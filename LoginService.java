@@ -14,7 +14,7 @@ public class LoginService {
 	public boolean checkCredentials()
 	{
 		
-		///TODO search for username, and check against password
+		
 		return true;
 	}
 }
