@@ -26,15 +26,14 @@ public class LoginGui extends Application{
 
 	private Song[] songArray;
 
-	public static void main(String [] args)
+
+	public LoginGui()
 	{
 		
-		launch(args);
 	}
-	
-
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage primaryStage) 
+	{
 		primaryStage.setTitle("JesusLoversSongService");
 		
 		/** how to play a song asynchronously **/
@@ -58,7 +57,7 @@ public class LoginGui extends Application{
 		songArray = gson.fromJson(songs, Song[].class);
 		
 		
-		CreateAccountGui acc = new CreateAccountGui(primaryStage);
+		CreateAccountGui acc = new CreateAccountGui();
 		Stage accountMake = acc.getPrimaryStage();
 		Label username = new Label();
 		Label password = new Label();
@@ -111,6 +110,7 @@ public class LoginGui extends Application{
 		});
 		return ans;
 	}
+
 	
 	
 }	
