@@ -1,3 +1,5 @@
+import java.util.List;
+
 ///class to store other info on an account, used to pull profile from json and to create accounts
 public class ProfileObject {
 
@@ -6,6 +8,7 @@ public class ProfileObject {
 	private String email;
 	private String gender;
 	private int age;
+	private List<PlayList> playlists; 
 	
 
 	public ProfileObject(String firstName, String lastName, String email, String gender, int age) {
@@ -14,6 +17,14 @@ public class ProfileObject {
 		this.email = email;
 		this.gender = gender;
 		this.age = age;
+	}
+	public void setPlaylists(List<PlayList> playlists)
+	{
+		this.playlists = playlists;
+	}
+	public List<PlayList> getPlaylists()
+	{
+		return playlists;
 	}
 	public String getFirstName() {
 		return firstName;
