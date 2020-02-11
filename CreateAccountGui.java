@@ -117,7 +117,7 @@ public class CreateAccountGui{
 		{
 			return "Age Invalid";
 		}
-		ProfileObject profile = new ProfileObject(fname.getText(), lname.getText(), email.getText(), gender.getValue(), ageNum);
+		ProfileObject profile = new ProfileObject(user.getText(), pass.getText(), fname.getText(), lname.getText(), email.getText(), gender.getValue(), ageNum);
 		
 		LoginObject credentials = new LoginObject(user.getText(), pass.getText());
 		AccountCreationManager accManager = new AccountCreationManager(new AccountCreationService(credentials, profile));
