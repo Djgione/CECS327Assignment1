@@ -2,6 +2,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -14,6 +15,7 @@ import javafx.stage.Stage;
 public class CreateAccountGui{
 
 	private Stage primaryStage;
+
 	
 	public Stage getPrimaryStage() {
 		return primaryStage;
@@ -21,7 +23,7 @@ public class CreateAccountGui{
 
 	public CreateAccountGui()
 	{
-		 //old stage (login)
+
 		Stage primary = new Stage(); //new stage
 		
 		GridPane pane = new GridPane(); //new pane for new stage
@@ -55,9 +57,8 @@ public class CreateAccountGui{
 		lname.setPromptText("Last Name");
 		
 		TextField age = new TextField();
-		age.setPromptText("44");
-		Label ageLabel = new Label("Age: ");
-		HBox ageHolder = new HBox(10);
+		age.setPromptText("Age");
+		
 		
 		//button creatoin and action
 		
@@ -72,8 +73,10 @@ public class CreateAccountGui{
 		}
 		else
 		{
-			invis.setText("Account Created!");
+			
 			try {
+			invis.setText("Account Created!");
+			invis.setVisible(true);
 			Thread.sleep(1000);
 			}
 			catch(InterruptedException e)
@@ -81,19 +84,23 @@ public class CreateAccountGui{
 				e.printStackTrace();
 			}
 			
+			LoginGui obj = new LoginGui();
+			Node source = (Node) (event.getSource());
+			Stage sourceStage = (Stage)source.getScene().getWindow();
+			sourceStage.close();
+			obj.start(new Stage());
+			
+			
 		}
 		
 		}	);
 		
 		
 		
-		ageHolder.getChildren().addAll(ageLabel, age);
-		
-		ageHolder.requestFocus();
-		
+	
 		pane.setVgap(15);
 		pane.setHgap(10);
-		pane.addColumn(0, email,user,pass,fname,lname,ageHolder,genderCombo,create, invis);
+		pane.addColumn(0, email,user,pass,fname,lname,age,genderCombo,create, invis);
 		pane.setPadding(new Insets(20,20,20,20));
 		
 		
@@ -104,6 +111,8 @@ public class CreateAccountGui{
 		
 		this.primaryStage = primary;
 	}
+	
+	
 	
 	//attempts to create and validate for accurate account
 	private String createAccount(TextField user, TextField pass, TextField fname, TextField lname, TextField email, ComboBox<String> gender, TextField age)

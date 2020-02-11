@@ -24,7 +24,9 @@ import javafx.stage.Stage;
 
 public class LoginGui extends Application{
 
-	private Song[] songArray;
+
+	private static Song[] songArray;
+	public static volatile AccountDatabase accounts = new AccountDatabase();
 
 
 	public LoginGui()
@@ -62,6 +64,8 @@ public class LoginGui extends Application{
 		Stage accountMake = acc.getPrimaryStage();
 		Label username = new Label();
 		Label password = new Label();
+		Label invis = new Label();
+		invis.setVisible(false);
 		Button btn = new Button();
 		Hyperlink createAccountCaller = buildCreateAccountLink(primaryStage, accountMake);
 		TextField usernameInsert = new TextField();
@@ -78,13 +82,23 @@ public class LoginGui extends Application{
 
 				LoginObject credentials = new LoginObject(usernameInsert.getText(), passwordInsert.getText());
 				
-				
-				DashboardGui obj = new DashboardGui();
-				obj.Start();
-				Node source = (Node) (event.getSource());
-				Stage sourceStage = (Stage)source.getScene().getWindow();
-				sourceStage.close();
-			
+				///TODO Login Service
+				LoginService service = new LoginService(credentials);
+				ProfileObject prof = service.checkCredentials();
+				if(prof != null)
+				{
+					DashboardGui obj = new DashboardGui(prof);
+					obj.Start();
+					Node source = (Node) (event.getSource());
+					Stage sourceStage = (Stage)source.getScene().getWindow();
+					sourceStage.close();
+				}
+				else
+				{
+					invis.setText("Login Failed");
+					invis.setVisible(true);
+				}
+
 			}
 		});
 
@@ -94,7 +108,7 @@ public class LoginGui extends Application{
 		root.setHgap(10);
 		root.setPadding(new Insets(20,20,20,20));
 		
-		root.addColumn(0, username,password,btn);
+		root.addColumn(0, username,password,btn,invis);
 		root.addColumn(1,usernameInsert,passwordInsert,createAccount);
 		
 		root.getChildren();

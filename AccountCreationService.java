@@ -1,3 +1,4 @@
+
 public class AccountCreationService {
 	
 	private String nameChecker = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ, .-'";
@@ -76,9 +77,14 @@ public class AccountCreationService {
 	///TODO: finish check username
 	public boolean checkUsername()
 	{
-		
-		
-		
+		if(LoginGui.accounts.accountArray.length == 0){
+			return true;
+		}
+		for(ProfileObject prof : LoginGui.accounts.accountArray){
+			if(profile.getUsername().equals(prof.getUsername())){
+				return false;
+			}
+		}
 		return true;
 	}
 	
@@ -104,6 +110,4 @@ public class AccountCreationService {
 		return true;
 	}
 
-	
-	
 }

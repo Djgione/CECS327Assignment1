@@ -11,10 +11,17 @@ public class LoginService {
 		return credentials;
 	}
 	
-	public boolean checkCredentials()
+	public ProfileObject checkCredentials()
 	{
 		
-		
-		return true;
+		if(LoginGui.accounts.accountArray.length == 0)
+			return null;
+		for(ProfileObject prof : LoginGui.accounts.accountArray){
+			if(credentials.getUsername().equals(prof.getUsername())){
+				if(credentials.getPassword().equals(prof.getPassword()))
+					return prof;
+			}
+		}
+		return null;
 	}
 }
