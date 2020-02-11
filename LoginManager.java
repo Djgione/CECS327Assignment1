@@ -1,4 +1,3 @@
-
 public class LoginManager {
 
 	private LoginService service;
@@ -18,4 +17,8 @@ public class LoginManager {
 	}
 	
 	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> JosiahQ

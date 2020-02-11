@@ -1,3 +1,10 @@
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.stream.Stream;
+
+import com.google.gson.Gson;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -16,9 +23,16 @@ import javafx.stage.Stage;
 
 
 public class LoginGui extends Application{
+<<<<<<< HEAD
 
 	public static void main(String [] args)
 	{
+=======
+	public Song[] songArray;
+	
+	
+	public static void main(String[] args) {
+>>>>>>> JosiahQ
 		launch(args);
 	}
 	
@@ -26,6 +40,28 @@ public class LoginGui extends Application{
 	@Override
 	public void start(Stage primaryStage) {
 		primaryStage.setTitle("JesusLoversSongService");
+		
+		/** how to play a song asynchronously **/
+		MusicService player = new MusicService();
+		new Thread(new Runnable() {
+			public void run() {
+				player.mp3play("imperial.mp3");
+				
+			}
+		}).start();
+		
+		//create an array of Song objects by parsing the json data in 'music.json' with gson
+		Gson gson = new Gson();
+		StringBuilder songsJson = new StringBuilder();
+		try(Stream<String> stream = Files.lines(Paths.get("music.json"), StandardCharsets.UTF_8)){
+			stream.forEach(s -> songsJson.append(s).append("\n"));
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+		String songs = songsJson.toString();
+		songArray = gson.fromJson(songs, Song[].class);
+		
+		
 		CreateAccountGui acc = new CreateAccountGui(primaryStage);
 		Stage accountMake = acc.getPrimaryStage();
 		Label username = new Label();

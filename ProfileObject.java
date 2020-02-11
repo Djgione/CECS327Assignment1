@@ -10,7 +10,7 @@ public class ProfileObject {
 	private String email;
 	private String gender;
 	private int age;
-	private List<PlayList> playlists; 
+	private List<PlayList> playlists;
 	
 
 	public ProfileObject(String username, String password, String firstName, String lastName, String email, String gender, int age) {
@@ -35,6 +35,9 @@ public class ProfileObject {
 	public List<PlayList> getPlaylists()
 	{
 		return playlists;
+	}
+	public String getUsername() {
+		return username;
 	}
 	public String getFirstName() {
 		return firstName;
@@ -85,6 +88,26 @@ public class ProfileObject {
 		return builder.toString();
 	}
 	
+<<<<<<< HEAD
 
+=======
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("firstName: ");
+		builder.append(firstName);
+		builder.append(", lastName: ");
+		builder.append(lastName);
+		builder.append(", email: ");
+		builder.append(email);
+		builder.append(", gender: ");
+		builder.append(gender);
+		builder.append(", age: ");
+		builder.append(age);
+		builder.append(", playlists: ");
+		builder.append(playlists);
+		return builder.toString();
+	}
+>>>>>>> JosiahQ
 	
 }

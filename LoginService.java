@@ -1,4 +1,3 @@
-
 public class LoginService {
 
 	private LoginObject credentials;
@@ -16,7 +15,14 @@ public class LoginService {
 	{
 		
 		///TODO search for username, and check against password
+<<<<<<< HEAD
 		
 	}
 	
 }
+=======
+		return true;
+	}
+	
+}
+>>>>>>> JosiahQ

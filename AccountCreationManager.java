@@ -1,4 +1,3 @@
-
 public class AccountCreationManager {
 
 	private AccountCreationService service;
