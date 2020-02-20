@@ -10,7 +10,7 @@ public class LoginManager {
 		return service;
 	}
 
-	public boolean handle()
+	public ProfileObject handle()
 	{
 		return service.checkCredentials();
 	}

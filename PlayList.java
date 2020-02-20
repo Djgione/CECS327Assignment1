@@ -37,4 +37,17 @@ public class PlayList {
 		return list.remove(song);
 	}
 
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("list: ");
+		builder.append(list);
+		builder.append(", name: ");
+		builder.append(name);
+		return builder.toString();
+	}
+	
+		
+
 }

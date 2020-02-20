@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 ///class to store other info on an account, used to pull profile from json and to create accounts
@@ -21,6 +22,7 @@ public class ProfileObject {
 		this.email = email;
 		this.gender = gender;
 		this.age = age;
+		playlists = new ArrayList<>();
 	}
 	public String getUsername() {
 		return username;
