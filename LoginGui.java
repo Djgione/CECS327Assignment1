@@ -25,7 +25,7 @@ import javafx.stage.Stage;
 public class LoginGui extends Application{
 
 
-	private static Song[] songArray;
+	public static volatile Song[] songArray;
 	public static volatile AccountDatabase accounts = new AccountDatabase();
 
 
@@ -33,6 +33,7 @@ public class LoginGui extends Application{
 	{
 		
 	}
+	
 	
 	@Override
 	public void start(Stage primaryStage) 

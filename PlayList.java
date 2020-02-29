@@ -36,7 +36,18 @@ public class PlayList {
 	{
 		return list.remove(song);
 	}
-
+	
+	public boolean removeSong(String title)
+	{
+		for(Song s : list)
+		{
+			if(s.song.title.equals(title)) {
+				list.remove(s);
+				return true;
+			}
+		}
+		return false;
+	}
 
 	@Override
 	public String toString() {

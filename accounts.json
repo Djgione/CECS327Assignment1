@@ -1,1 +1,1 @@
-[{"username":"username","password":"password","firstName":"jeff","lastName":"nazua","email":"email","gender":"Male","age":24,"playlists":[]}]
+[{"username":"username","password":"password","firstName":"jeff","lastName":"nazua","email":"email","gender":"Male","age":24,"playlists":[]},{"username":"User","password":"Pass123","firstName":"daniel","lastName":"gione","email":"mail","gender":"Male","age":19,"playlists":[{"list":[],"name":"jeff"},{"list":[],"name":"java"},{"list":[],"name":"jeffrey"}]}]

@@ -38,6 +38,17 @@ public class ProfileObject {
 	{
 		return playlists;
 	}
+	
+	public PlayList findPlaylist(String name)
+	{
+		for(int i = 0; i < playlists.size(); i++)
+		{
+			if(playlists.get(i).getName().equals(name))
+				return playlists.get(i);
+				
+		}
+		return null;
+	}
 	public String getFirstName() {
 		return firstName;
 	}
